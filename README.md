@@ -7,7 +7,9 @@
 ## About
 This browser extension checks for publicly exposed repositories and changes it's icon to the logo of the detected repository type.
 
-It accomplishes this by checking for common paths, like ```https://example.com/.git/config```.
+It's available in the [Chrome Webstore](https://chrome.google.com/webstore/detail/repo-in-the-wild/aikcllliacgpbnpalenkkmhciaekgfdl). The Firefox version is currently under review and will be added here as soon as it's approved by Mozilla.
+
+It accomplishes it's task by checking for common paths, like ```https://example.com/.git/config```.
 
 Currently supported are:
  * Git
