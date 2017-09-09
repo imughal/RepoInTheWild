@@ -3,7 +3,7 @@
   
     "name": "Repo In The Wild",
     "description": "A browser extension indicating publicly exposed code repositories.",
-    "version": "1.0",
+    "version": "1.1",
 
     "icons": {"128": "icons/icon.png" },
   
