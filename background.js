@@ -13,10 +13,17 @@ var allowedProtocols = ["https:", "http:"]
 function checkURLReturns200(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
-    callback(xhr.readyState === 4 && xhr.status === 200 && xhr.responseURL === url)
+    callback(xhr.readyState === 4 && xhr.status === 200 && xhr.responseURL === url && !isHTML(xhr.response))
   }
   xhr.open('GET', url, true)
   xhr.send(null)
+}
+
+function isHTML(str) {
+  var doc = new DOMParser().parseFromString(str, "text/html")
+  return [].slice.call(doc.body.childNodes).some(function(node) {
+    return node.nodeType === 1
+  })
 }
 
 function setIcon(repoType, tabId) {
